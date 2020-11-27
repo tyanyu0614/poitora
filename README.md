@@ -41,7 +41,7 @@
 | title            | string     | null: false                   |
 | content          | text       | null: false                   |
 | category         | string     | null: false                   |
-| cost             | string     | null: false                   |
+| cost             | integer    | null: false                   |
 | user             | references | null: false,foreign_key: true |
 
 ### Association
