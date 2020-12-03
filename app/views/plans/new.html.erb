@@ -1,0 +1,15 @@
+  <div class="container">
+    <h3 class="h3">新規投稿する</h3>
+  <%= form_with(model: @plan, local: true) do |form| %>
+
+  <%= form.text_field :title, placeholder: "タイトル" %>
+  <%= form.text_area :content, placeholder: "記事内容" %>
+  <%= form.text_area :cost, placeholder: "総費用" %>
+
+  <div class="field">
+    <%= form.label :image, "旅行の画像" %><br />
+    <%= form.file_field :image %>
+ </div>
+  <%= form.submit "保存する" %>
+  </div>
+<% end %>
