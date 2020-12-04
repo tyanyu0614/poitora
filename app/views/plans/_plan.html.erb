@@ -6,6 +6,7 @@
     <p class="card__summary">
       ¥<%= plan.cost %>
     </p>
+      <%= plan.created_at.to_s(:datetime) %>
     <%= link_to  plan.user.nickname, root_path, class: :card__user %>
     </div>
 </div>

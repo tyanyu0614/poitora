@@ -1,7 +1,9 @@
 class PlansController < ApplicationController
+  # before_action :set_plans, only: [:index,:create,]
+
   def index
     @plan = Plan.includes(:user).order("created_at DESC")
-    # @plans = Plan.all
+    # @plan = Plan.all
   end
 
   def new
@@ -25,6 +27,12 @@ class PlansController < ApplicationController
     @plan = Plan.search(params[:keyword])
   end
 
+  def destroy
+    plan = Plan.find(params[:id])
+    plan.destroy
+    redirect_to plans_path
+  end
+
   private
   #プライベートメソッド
 
@@ -33,5 +41,8 @@ class PlansController < ApplicationController
     params.require(:plan).permit(:title, :content, :cost,:image).merge(user_id: current_user.id)
   end
   
+  # def set_plans
+  # end
+
 end
 
