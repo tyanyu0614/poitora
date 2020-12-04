@@ -17,6 +17,14 @@ class PlansController < ApplicationController
     end
   end
 
+  def show
+    @plan = Plan.find(params[:id])
+  end
+
+  def search
+    @plan = Plan.search(params[:keyword])
+  end
+
   private
   #プライベートメソッド
 

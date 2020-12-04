@@ -7,4 +7,12 @@ class Plan < ApplicationRecord
     validates :content
     validates :cost
   end
+
+  def self.search(search)
+    if search != ""
+      Plan.where('title LIKE(?)', "%#{search}%")
+    else
+      Plan.all
+    end
+  end
 end

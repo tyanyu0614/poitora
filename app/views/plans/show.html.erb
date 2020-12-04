@@ -1,0 +1,14 @@
+<main class= "plan-main">
+  <div class="inner">
+    <div class="plan__wrapper">
+      <p class="plan__hedding" >
+      <%= "記事のTITLE"%>
+      </p>
+      <%= link_to @plan.user.nickname, root_path, class: :plan__user %>
+    </div>
+
+    <div class="text-center align-items-start                     ">
+        <%= image_tag @plan.image.variant(resize: '500x500') %>
+      </div>
+  </div>
+</main>

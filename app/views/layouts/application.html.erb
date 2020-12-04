@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -24,15 +25,15 @@
     <div>
       <nav class="navbar navbar-dark bg-dark">
         <%# <span class="navbar-text">TRAVEL SPACE</span> %>
-        <%= link_to root_path do %><span class="navbar-text">TRAVEL SPACE</span><%end%>
+        <%= link_to root_path do %><span class="navbar-text-top">TRAVEL SPACE</span><%end%>
       <ul class='lists-right'>
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
       <% if user_signed_in? %>
       <li><%= link_to 'マイページ', root_path, class: "maypage-rigth" %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-right" %></li>
       <% else %>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path , class: "sign-up" %></li>
+      <%# <li>= link_to 'ログイン', new_user_session_path, class: "login-right"</li> %>
+      <%# <li>= link_to '新規登録', new_user_registration_path , class: "sign-up-right"</li> %>
       <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
     </ul>
     <%end%>
