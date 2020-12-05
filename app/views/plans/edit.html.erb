@@ -1,7 +1,7 @@
   <div class="container">
-    <h3 class="h3">新規投稿する</h3>
+    <h3 class="h3">編集する</h3>
   <%= form_with(model: @plan, local: true) do |form| %>
-
+  
   <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
   <%= render 'shared/error_messages', model: form.object %>
 

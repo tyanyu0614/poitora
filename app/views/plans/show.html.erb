@@ -7,7 +7,7 @@
       <%= link_to @plan.user.nickname, root_path, class: :plan__user %>
       <%# プランの投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? && current_user.id == @plan.user_id %>
-          <%= link_to "編集する", root_path, class: :plan__btn %>
+          <%= link_to "編集する", edit_plan_path(@plan.id), class: :plan__btn %>
           <%= link_to "削除する", plan_path(@plan.id), method: :delete, class: :plan__btn %>
         <% end %>
       <%# プランの投稿者とログインしているユーザーが同じであれば上記を表示する %>

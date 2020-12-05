@@ -5,7 +5,7 @@ class Plan < ApplicationRecord
   with_options presence: true do
     validates :title
     validates :content
-    validates :cost
+    validates :cost ,format: {with: /\A[0-9]+\z/}
   end
 
   def self.search(search)

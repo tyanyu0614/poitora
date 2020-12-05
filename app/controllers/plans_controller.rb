@@ -33,6 +33,19 @@ class PlansController < ApplicationController
     redirect_to plans_path
   end
 
+  def edit
+    @plan = Plan.find(params[:id])
+  end
+
+  def update
+    plan = Plan.find(params[:id])
+    if plan.update(plan_params)
+      redirect_to plans_path
+    else
+      render :edit
+    end
+  end
+
   private
   #プライベートメソッド
 
