@@ -1,0 +1,15 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <div>
+  <% @plans.each do |plan| %>
+    <div>
+    <%= image_tag plan.image, class: "show-plan-img" %>
+      <p><%= plan.title %></p>
+      <span class="name"><%= plan.content %></span>
+    </div>
+  <% end %>
+  </div>
+</div>
+<div class="text-center">
+<%= link_to '投稿画面へ', new_user_registration_path , class: "btn btn-primary" %>
+</div>

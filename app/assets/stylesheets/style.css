@@ -151,6 +151,17 @@ form input[type="submit"]:hover {
     width:90%;
   }
 
+  .show-plan-img {
+    width: 50%;
+  }
+
+  .plan__detail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+  }
+
 .card__title {
   padding-top: 10px;
   display: block;
@@ -251,3 +262,27 @@ form input[type="submit"]:hover {
 /* .plan-btn-icon {
   width: 60%;
 } */
+
+.image-plan-show {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.title-show {
+  font-size: 30px;
+}
+
+.plan__body {
+  
+}
+
+.comments{
+  padding-left: 20px;
+}
+
+.comments_list{
+  list-style-type: square;
+  padding-bottom: 5px;
+}

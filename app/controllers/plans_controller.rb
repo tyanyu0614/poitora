@@ -21,6 +21,8 @@ class PlansController < ApplicationController
 
   def show
     @plan = Plan.find(params[:id])
+    @comment = Comment.new
+    @comments = @plan.comments.includes(:user) #includesメソッドを使って、N+1問題を解決している
   end
 
   def search

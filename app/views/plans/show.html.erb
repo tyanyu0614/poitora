@@ -2,7 +2,7 @@
   <div class="inner">
     <div class="text-center plan__wrapper">
       <p class="plan__hedding" >
-      <%= "プランの詳細"%>
+        <%= "プランの詳細"%>
       </p>
       <%= link_to @plan.user.nickname, root_path, class: :plan__user %>
       <%# プランの投稿者とログインしているユーザーが同じであれば以下を表示する %>
@@ -11,17 +11,44 @@
           <%= link_to "削除する", plan_path(@plan.id), method: :delete, class: :plan__btn %>
         <% end %>
       <%# プランの投稿者とログインしているユーザーが同じであれば上記を表示する %>
-    </div>
-
-    <div style="position:absolute; top:200px; left:470px">
-        <%= image_tag @plan.image.variant(resize: '500x500') %>
-      </div>
-      <div class="plan__body">
+        <%= image_tag @plan.image.variant(resize: '500x500'),class: "image-plan-show" %>
+     <div class="plan__body">
         <div class="plan__detail">
-          <p class="detail__title">TITLE</p>
-          <p class="detail__message">
-            <%= @plan.title %>
+          <p class="title-show">TITLE</p>
+          <%= @plan.title %>
+          <p class="detail__content">
+            <%= @plan.content %>
+          </p>
+          <p class="detail__cost">
+            ¥<%= @plan.cost %>
           </p>
         </div>
+    </div>
+
+    <div class="container">
+      <% if user_signed_in? %>
+      <%= form_with(model: [@plan, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+        <% end %>
+        <% else %>
+          <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+        <% end %>
+        <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <%= link_to comment.user.nickname, user_path(comment.user), class: :comment_user %>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+    </div>
+        <%= link_to '投稿画面へ', new_user_registration_path , class: "btn btn-primary" %>
+        </div>
+      </div>
   </div>
+
 </main>
