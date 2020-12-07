@@ -29,11 +29,9 @@
       <ul class='lists-right '>
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
       <% if user_signed_in? %>
-      <li><%= link_to 'マイページ', user_path(current_user), class: "maypage-rigth" %></li>
+      <li><%= link_to current_user.nickname, user_path(current_user), class: "maypage-rigth" %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-right" %></li>
-      <% else %>
-      <%# <li>= link_to 'ログイン', new_user_session_path, class: "login-right"</li> %>
-      <%# <li>= link_to '新規登録', new_user_registration_path , class: "sign-up-right"</li> %>
+      <%# <% else %>
       <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
     </ul>
     <%end%>

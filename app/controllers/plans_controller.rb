@@ -1,5 +1,5 @@
 class PlansController < ApplicationController
-  # before_action :set_plans, only: [:index,:create,]
+  before_action :set_plans, only: [:show,:edit,]
 
   def index
     @plan = Plan.includes(:user).order("created_at DESC")
@@ -20,7 +20,6 @@ class PlansController < ApplicationController
   end
 
   def show
-    @plan = Plan.find(params[:id])
     @comment = Comment.new
     @comments = @plan.comments.includes(:user) #includesメソッドを使って、N+1問題を解決している
   end
@@ -36,12 +35,11 @@ class PlansController < ApplicationController
   end
 
   def edit
-    @plan = Plan.find(params[:id])
   end
 
   def update
-    plan = Plan.find(params[:id])
-    if plan.update(plan_params)
+    @plan = Plan.find(params[:id])
+    if @plan.update(plan_params)
       redirect_to plans_path
     else
       render :edit
@@ -49,15 +47,15 @@ class PlansController < ApplicationController
   end
 
   private
-  #プライベートメソッド
 
   #後でアクティブハッシュでカテゴリーも追加する。
   def plan_params
     params.require(:plan).permit(:title, :content, :cost,:image).merge(user_id: current_user.id)
   end
   
-  # def set_plans
-  # end
+  def set_plans
+    @plan = Plan.find(params[:id])
+  end
 
 end
 

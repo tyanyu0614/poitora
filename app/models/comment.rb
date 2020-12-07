@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-  belongs_to :user # usersテーブルとのアソシエーション
-  belongs_to :plan # planテーブルとのアソシエーション
+  belongs_to :user 
+  belongs_to :plan 
 
 end

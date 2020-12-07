@@ -14,7 +14,7 @@
 ### Association
 - has_many :plans
 - has_many :comments
-- has_many :follows
+- has_many :relationship
 - has_many :likes
 
 
@@ -49,7 +49,7 @@
 - belongs_to :user
 - has_many :comments
 
-## follows テーブル
+## relationship テーブル
 
 | Column           | Type       | Options                        |
 | -----------------| ---------- | -----------------------------  |

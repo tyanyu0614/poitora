@@ -1,6 +1,9 @@
 <div class="card-plan">
 <%# <%= image_tag plan.image.variant(resize: '500x500'), class: "plan-img" if plan.image.attached? %> 
-<%= link_to image_tag(plan.image.variant(resize: '500x500'), class: "plan-img"),plan_path(plan.id) if plan.image.attached? %>
+<div class ="img-box">
+<%# <%= link_to image_tag(plan.image.variant(resize: '500x500'), class: "plan-img"),plan_path(plan.id) if plan.image.attached? %>
+<%= link_to image_tag(plan.image, class: "plan-img"),plan_path(plan.id) %>
+</div>
 <div class="card__body">
     <%= link_to plan.title, plan_path(plan.id), class: :card__title%>
     <p class="card__summary">
