@@ -4,24 +4,33 @@
     <p class="servicet-title">お得に旅ができた経験を投稿して共有してください！</p>
   </div>
 </div>
-
-<%= form_with(url: search_plans_path, local: true, method: :get, class: "search-plan") do |form| %>
-  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
-<% end %>
-
+<div class="mt-5 pb-5 lead text-center  ">
+  <%= link_to "新規投稿", new_plan_path, class: "btn btn-outline-success" %>
+</div>
 <div class="plan-sub-title">
-  <strong>新着一覧</strong>
+  <strong >新着一覧</strong>
 </div>
-<div class="mt-5 pb-5 lead text-center ">
-  <%= link_to "新規投稿", new_plan_path, class: "plan-post" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 mx-auto">
+<%= form_with(url: search_plans_path, local: true, method: :get, class: "search-plan") do |form| %>
+  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "form-control" %>
+  <%= form.submit "検索", class: "btn btn-primary" %>
+   <% end %>
+   </div>
+  </div>
 </div>
+
 <%#投稿記事の一覧を表示させる%>
 <div class="card__wrapper">
   <%= render partial: "plans/plan", collection: @plan %> 
- 
-  
 </div>
+<%#投稿記事の一覧を表示させる%>
+
+<%#フォロー機能部分テンプレート>
+<%# <%= render partial:"relationships/follow_button", user: @user %>
+
 
 <%= link_to(new_plan_path, class: 'purchase-btn') do %>
   <span class='plan-btn-text'>投稿</span>

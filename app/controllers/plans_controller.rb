@@ -3,7 +3,6 @@ class PlansController < ApplicationController
 
   def index
     @plan = Plan.includes(:user).order("created_at DESC")
-    # @plan = Plan.all
   end
 
   def new

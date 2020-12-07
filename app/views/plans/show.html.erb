@@ -14,7 +14,7 @@
         <%= image_tag @plan.image.variant(resize: '500x500'),class: "image-plan-show" %>
      <div class="plan__body">
         <div class="plan__detail">
-          <p class="title-show">TITLE</p>
+          <%# <p class="title-show">TITLE</p> %>
           <%= @plan.title %>
           <p class="detail__content">
             <%= @plan.content %>
@@ -28,8 +28,8 @@
     <div class="container">
       <% if user_signed_in? %>
       <%= form_with(model: [@plan, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" ,class: "form-control" %>
+        <%= form.submit "SEND" ,class:"btn btn-primary"%>
         <% end %>
         <% else %>
           <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
@@ -40,13 +40,13 @@
         <% @comments.each do |comment| %>
           <p>
             <%= link_to comment.user.nickname, user_path(comment.user), class: :comment_user %>
-            <%= comment.text %>
+            :<%= comment.text %>
           </p>
         <% end %>
       <% end %>
     </div>
     </div>
-        <%= link_to '投稿画面へ', new_user_registration_path , class: "btn btn-primary" %>
+        <%= link_to '投稿画面へ', new_user_registration_path , class: "btn btn-outline-secondary" %>
         </div>
       </div>
   </div>

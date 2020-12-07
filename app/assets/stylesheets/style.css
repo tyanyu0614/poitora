@@ -6,12 +6,12 @@
 
 .jumbotron-extend {
   position: relative;
-  height: 90vh;
+  height: 95vh;
   min-height: 300px;
-  /* background-image: image-url("bs-main.png") no-repeat center center; */
   background-image: url(mesut-kaya-eOcyhe5-9sQ-unsplash.jpg);
   background-size: cover;
 }
+
 .jumbotron-container {
   position: relative;
   top: 50%;
@@ -52,7 +52,6 @@ h1 {
 }
 
 .footer {
-  
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -78,16 +77,38 @@ h1 {
   font-family: 'Avenir', serif;
 }
 .plan-sub-title {
+  display: flex;
+  align-items: center; /* 垂直中心 */
+  justify-content: center; /* 水平中心 */
   font-size: 40px;
   text-align: center;
-  padding-top: 50px;
   font-family: 'Avenir', serif;
-  background: #dfefff;
-  box-shadow: 0px 0px 0px 5px #dfefff;
-  
-  padding: 0.2em 0.5em;
-  color: #454545;
 }
+
+.plan-sub-title:before,.plan-sub-title:after {
+  border-top: 1px solid;
+  content: "";
+  width: 10em; /* 線の長さ */
+}
+.plan-sub-title:before {
+  margin-right: 1em; /* 文字の右隣 */
+}
+.plan-sub-title:after {
+  margin-left: 1em; /* 文字の左隣 */
+}
+
+.lan-sub-title:before, .lan-sub-title:after {
+  border-top: 1px solid;
+  content: "";
+  width: 3em; /* 線の長さ */
+}
+.lan-sub-title:before {
+  margin-right: 1em; /* 文字の右隣 */
+}
+.lan-sub-title:after {
+  margin-left: 1em; /* 文字の左隣 */
+}
+
 
 .maypage-rigth{
   color:white;
@@ -115,24 +136,22 @@ form textarea {
   font-family: "游ゴシック", "YuGothic";
 }
 
-form input[type="submit"] {
+/* form input[type="submit"] {
   background-color:darkgreen;
   border-radius: 20px;
   color: #fff;
   border: 0;
   font-size: 18px;
-}
+} */
 
 .h3 {
   text-align: center;
   margin-top: 30px;
 }
 
-
-
-form input[type="submit"]:hover {
+/* form input[type="submit"]:hover {
   background-color: lightgreen;
-}
+} */
 
 .card-plan {
   width: calc((100% - 50px) / 3);
@@ -230,7 +249,6 @@ form input[type="submit"]:hover {
 
 .plan__btn{
   /* display: block; */
-  
   padding: 0.4em 1.6em;
   font-size: 0.4em;
   color: #999;
@@ -241,6 +259,7 @@ form input[type="submit"]:hover {
   transition: 0.4s ease;
   margin: 0 4px;
 }
+
 .plan__btn:hover{
   color: #fff;
   background: #999;
@@ -269,10 +288,6 @@ form input[type="submit"]:hover {
   margin-bottom: 5px;
 }
 
-/* .plan-btn-icon {
-  width: 60%;
-} */
-
 .image-plan-show {
   display: block;
   margin-left: auto;
@@ -282,10 +297,6 @@ form input[type="submit"]:hover {
 
 .title-show {
   font-size: 30px;
-}
-
-.plan__body {
-  
 }
 
 .comments{

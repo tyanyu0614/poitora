@@ -4,15 +4,22 @@
 
   <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
   <%= render 'shared/error_messages', model: form.object %>
+  <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
-  <%= form.text_field :title, placeholder: "タイトル" %>
-  <%= form.text_area :content, placeholder: "記事内容" %>
-  <%= form.text_area :cost, placeholder: "総費用" %>
-
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <%= form.text_field :title, placeholder: "タイトル",class: "form-control" %>
+      <%= form.text_area :content, placeholder: "記事内容" ,class: "form-control"%>
+      <%= form.text_area :cost, placeholder: "総費用" ,class: "form-control"%>
   <div class="field">
     <%= form.label :image, "旅行の画像" %><br />
     <%= form.file_field :image %>
  </div>
-  <%= form.submit "保存する" %>
+  <%= form.submit "保存する" ,class:"btn btn-primary" %>
+    </div>
+   </div>
+  </div>
+
   </div>
 <% end %>

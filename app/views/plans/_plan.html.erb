@@ -1,7 +1,6 @@
 <div class="card-plan">
 <%# <%= image_tag plan.image.variant(resize: '500x500'), class: "plan-img" if plan.image.attached? %> 
 <div class ="img-box">
-<%# <%= link_to image_tag(plan.image.variant(resize: '500x500'), class: "plan-img"),plan_path(plan.id) if plan.image.attached? %>
 <%= link_to image_tag(plan.image, class: "plan-img"),plan_path(plan.id) %>
 </div>
 <div class="card__body">
@@ -9,6 +8,9 @@
     <p class="card__summary">
       ¥<%= plan.cost %>
     </p>
+    <div id="like-btn-<%= plan.id %>">
+      <%= render 'likes/like', plan: plan %>
+    </div>
       <%= plan.created_at.to_s(:datetime) %>
     <%= link_to  plan.user.nickname, root_path, class: :card__user %>
     </div>
