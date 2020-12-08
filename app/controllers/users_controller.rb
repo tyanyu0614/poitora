@@ -3,8 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @nickname = current_user.nickname
-    @plans = current_user.plans
+    @user = User.find(params[:id]) #クリックしたユーザーのidを探して変数@userに代入
+    @plans = @user.plans
   end
-  
 end

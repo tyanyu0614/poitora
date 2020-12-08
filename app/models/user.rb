@@ -3,7 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_many :comments
-         #  has_many :plans
+         has_many :plans
 
          #フォロー機能アソシエーション
         #  has_many :relationships, foreign_key: 'user_id'
@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
          #いいね機能アソシエーション
          has_many :likes
-         has_many :plans, through: :likes, source: :plan
+        #  has_many :plans, through: :likes, source: :plan
 
          with_options presence: true do
           validates :nickname

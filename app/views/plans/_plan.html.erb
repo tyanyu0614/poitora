@@ -12,7 +12,7 @@
       <%= render 'likes/like', plan: plan %>
     </div>
       <%= plan.created_at.to_s(:datetime) %>
-    <%= link_to  plan.user.nickname, root_path, class: :card__user %>
+    <%= link_to  plan.user.nickname, user_path(plan.user), class: :card__user %>
     </div>
 </div>
 

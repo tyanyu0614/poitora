@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+ <html>
   <head> 
     <title>Poitora</title>
     <%= csrf_meta_tags %>
@@ -10,7 +10,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>TRAVEL SPACE</title>
      
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
@@ -21,29 +20,27 @@
   </head>
 
 <!-- ナビゲーションバー -->
+<body>
 <header>
     <div>
       <nav class="navbar navbar-dark bg-dark">
-        <%# <span class="navbar-text">TRAVEL SPACE</span> %>
         <%= link_to root_path do %><span class="navbar-text-top">TRAVEL SPACE</span><%end%>
       <ul class='lists-right '>
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
-      <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, user_path(current_user), class: "maypage-rigth" %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-right" %></li>
-      <%# <% else %>
+        <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, user_path(current_user), class: "maypage-rigth" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-right" %></li>
+        <%# <% else %>
       <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
-    </ul>
-    <%end%>
+        <%end%>
+        </ul>
       </nav>
     </div>
 </header>
 <!-- ナビゲーションバー -->
 
-  <body>
     <%= yield %>
-  </body>
-
+</body>
   <footer class="footer">
     <div class="container">
       <p class="text-muted">Travel Space footer content here.</p>
