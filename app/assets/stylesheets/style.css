@@ -307,3 +307,8 @@ form textarea {
   list-style-type: square;
   padding-bottom: 5px;
 }
+
+.user-plan-contents {
+  margin-top: 30px;
+  /* border: 1px #999 solid; */
+}
