@@ -1,5 +1,5 @@
 class PlansController < ApplicationController
-  before_action :authenticate_user!, except:[:show]
+  before_action :authenticate_user!
   before_action :set_plans, only: [:show,:edit,]
   before_action :baria_user, only: [:destroy,:edit,:update]
   

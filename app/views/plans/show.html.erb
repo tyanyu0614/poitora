@@ -2,7 +2,7 @@
   <div class="inner">
     <div class="text-center plan__wrapper">
       <p class="plan__hedding" >
-        <%= "プランの詳細"%>
+        <%= "旅行の詳細"%>
       </p>
       <%= link_to @plan.user.nickname, user_path(@plan.user), class: :plan__user %>
       <%# プランの投稿者とログインしているユーザーが同じであれば以下を表示する %>
@@ -35,8 +35,9 @@
         <% else %>
           <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
         <% end %>
+        <div class="content">
         <div class="comments">
-      <h4>＜コメント一覧＞</h4>
+      <h5>＜コメント一覧＞</h5>
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p>
@@ -45,6 +46,7 @@
           </p>
         <% end %>
       <% end %>
+      </div>
     </div>
     </div>
         

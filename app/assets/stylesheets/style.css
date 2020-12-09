@@ -312,3 +312,11 @@ form textarea {
   margin-top: 30px;
   /* border: 1px #999 solid; */
 }
+
+.content {
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: lightgray;
+  box-sizing: border-box;
+}
