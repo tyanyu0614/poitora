@@ -60,6 +60,7 @@ class PlansController < ApplicationController
   end
 
   def baria_user
+    @plan = Plan.find(params[:id])
     unless current_user == @plan.user
     redirect_to plans_path 
     end
