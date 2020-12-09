@@ -1,11 +1,11 @@
-<% if plan.liked_by?(current_user) %>
+<%# <% if plan.liked_by?(current_user) %> 
    <%# <%= link_to(plan_like_path(plan), method: :delete, remote: true, id: :"like-button-#{plan.id}") do %>
-   <%= link_to "いいね解除", plan_like_path(plan), method: :delete %>
-       <i class="fa-lg fas fa-heart icon-btn liked"></i>
+   <%# <%= link_to "いいね解除", plan_like_path(plan), method: :delete %>
+       <%# <i class="fa-lg fas fa-heart icon-btn liked"></i> %>
    <%# <% end %> 
-<% else %>
+<%# <% else %> 
    <%# <%= link_to(plan_likes_path(plan), method: :post, remote: true, id: :"like-button-#{plan.id}") do %> 
-   <%= link_to "いいね", plan_likes_path(plan), method: :post %>
-       <i class="fa-lg fas fa-heart icon-btn not-like"></i>
+   <%# <%= link_to "いいね", plan_likes_path(plan), method: :post %> 
+       <%# <i class="fa-lg fas fa-heart icon-btn not-like"></i> %>
    <%# <% end %>
-<% end %>
+<%# <% end %>

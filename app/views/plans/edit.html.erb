@@ -4,6 +4,7 @@
   
   <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
   <%= render 'shared/error_messages', model: form.object %>
+  <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
   <%= form.text_field :title, placeholder: "タイトル" %>
   <%= form.text_area :content, placeholder: "記事内容" %>

@@ -1,5 +1,8 @@
 class PlansController < ApplicationController
+  before_action :authenticate_user!, except:[:show]
   before_action :set_plans, only: [:show,:edit,]
+  before_action :baria_user, only: [:destroy,:edit,:update]
+  
 
   def index
     @plan = Plan.includes(:user).order("created_at DESC")
@@ -54,6 +57,12 @@ class PlansController < ApplicationController
   
   def set_plans
     @plan = Plan.find(params[:id])
+  end
+
+  def baria_user
+    unless current_user == @plan.user
+    redirect_to plans_path 
+    end
   end
 
 end

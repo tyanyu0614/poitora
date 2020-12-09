@@ -8,13 +8,14 @@ class Plan < ApplicationRecord
   with_options presence: true do
     validates :title
     validates :content
-    validates :cost ,format: {with: /\A[0-9]+\z/}
+    validates :cost , format: {with: /\A[0-9]+\z/}
+    validates :image
   end
 
 
-  def liked_by?(user)
-  likes.where(user_id: user.id).exists?
-  end
+  # def liked_by?(user)
+  # likes.where(user_id: user.id).exists?
+  # end
 
   def self.search(search)
     if search != ""
