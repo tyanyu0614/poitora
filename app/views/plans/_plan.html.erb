@@ -8,9 +8,12 @@
     <p class="card__summary">
       ¥<%= plan.cost %>
     </p>
+
     <div id="like-btn-<%= plan.id %>">
-      <%= render 'likes/like', plan: plan %>
+        <tr id="plan_<%= plan.id %>">
+        <%= render 'likes/like', plan: plan %>
     </div>
+
       <%= plan.created_at.to_s(:datetime) %>
     <%= link_to  plan.user.nickname, user_path(plan.user), class: :card__user %>
     </div>

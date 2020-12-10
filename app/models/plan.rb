@@ -2,8 +2,7 @@ class Plan < ApplicationRecord
   has_one_attached :image
   belongs_to :user
   has_many :comments ,dependent: :destroy
-  has_many :likes, dependent: :destroy
-  has_many :users, through: :likes 
+  has_many :likes, dependent: :destroy 
 
   with_options presence: true do
     validates :title
@@ -13,9 +12,9 @@ class Plan < ApplicationRecord
   end
 
 
-  # def liked_by?(user)
-  # likes.where(user_id: user.id).exists?
-  # end
+  def like_user(user_id)
+    likes.find_by(user_id: user_id)
+  end
 
   def self.search(search)
     if search != ""

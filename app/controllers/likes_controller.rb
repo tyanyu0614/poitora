@@ -1,25 +1,22 @@
 class LikesController < ApplicationController
-  before_action :authenticate_user!
+    before_action :set_like
+  
 
     def create
-      @plan = Plan.find(params[:plan_id])
-        user = current_user
-        plan = Plan.find(params[:plan_id])
-        like = Like.create(user_id: user.id, plan_id: plan.id)
-        redirect_to root_path
+        Like.create(user_id: current_user.id, plan_id: params[:id])
+        @plan.reload
+        
     end
 
     def destroy
-      @plan = Plan.find(params[:plan_id])
-        user = current_user
-        plan = Plan.find(params[:plan_id])
-        like = Like.find_by(user_id: user.id, plan_id: plan.id)
-        like.delete
-        redirect_to root_path
+        Like.find_by(user_id: current_user.id, plan_id: params[:id]).destroy
+        @plan.reload
+      end
+
+    private
+
+    def set_like
+        @plan = Plan.find(params[:id])
     end
 
-    # private
-    # def set_like
-    #     @plan = Plan.find(params[:plan_id])
-    # end
 end

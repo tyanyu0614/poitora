@@ -320,3 +320,21 @@ form textarea {
   background-color: lightgray;
   box-sizing: border-box;
 }
+
+.like-link {
+  text-decoration: none;
+}
+
+.like-link:hover {
+  background-color: #fff!important;
+}
+
+.like-btn {
+  font-size: 15px;
+  color: #808080;
+}
+ 
+.unlike-btn {
+  font-size: 15px;
+  color: #e54747;
+}

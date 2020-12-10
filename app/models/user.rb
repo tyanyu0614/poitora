@@ -20,6 +20,10 @@ class User < ApplicationRecord
           validates :password,format: { with:/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]/ }
           validates :password_confirmation,format: { with:/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]/ }
         end
+
+        def liked_by?(plan_id)
+          likes.where(plan_id: plan_id).exists?
+        end
         
          
           #フォロー機能のメソッド
