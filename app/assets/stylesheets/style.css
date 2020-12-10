@@ -271,13 +271,14 @@ form textarea {
 
 .plan-btn {
   width: 120px;
-  background: #3ccace;
+  background: #78c1c4;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
   right: 32px;
   position: fixed;
   padding: 15px;
+  opacity: 0.7;
 }
 
 .plan-btn-text {
@@ -338,3 +339,4 @@ form textarea {
   font-size: 15px;
   color: #e54747;
 }
+

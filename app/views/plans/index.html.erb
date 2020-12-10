@@ -1,3 +1,18 @@
+<header>
+<div class="fixed-top">
+      <nav class="navbar navbar-dark bg-dark">
+        <%= link_to root_path do %><span class="navbar-text-top">TRAVEL SPACE</span><%end%>
+      <ul class='lists-right '>      
+        <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, user_path(current_user), class: "maypage-rigth" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-right" %></li>
+        <%end%>
+        </ul>
+      </nav>
+    </div>
+</header>
+<div>
+<div class="btn-btn">
 <div class='plan-page-header'>
   <div class="plan-top-content">
     <div class="header-sub-title">TRAVELING<br>〜コスパのよい旅をしましょう〜</div>
@@ -5,7 +20,7 @@
   </div>
 </div>
 <div class="mt-5 pb-5 lead text-center  ">
-  <%= link_to "新規投稿", new_plan_path, class: "btn btn-outline-success" %>
+  <%= link_to "新規投稿", new_plan_path, class: "btn btn-outline-success shadow" %>
 </div>
 <div class="plan-sub-title">
   <strong >新着一覧</strong>
@@ -30,8 +45,8 @@
 
 <%#フォロー機能部分テンプレート>
 <%# <%= render partial:"relationships/follow_button", user: @user %>
-
-<div class="text-center">
+</div>
+<div class="plan-btn">
 <%= link_to(new_plan_path, class: 'purchase-btn') do %>
   <%= image_tag '飛行機の無料素材.png' , size: '100x50' ,class: "plan-btn-icon" %>
 <% end %>

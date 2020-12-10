@@ -10,7 +10,7 @@
           <%= link_to "編集する", edit_plan_path(@plan.id), class: :plan__btn %>
           <%= link_to "削除する", plan_path(@plan.id), method: :delete, class: :plan__btn %>
         <% end %>
-        <%= link_to '投稿画面へ', new_user_registration_path , class: :plan__btn %>
+        <%= link_to '記事一覧画面へ', new_user_registration_path , class: :plan__btn %>
       <%# プランの投稿者とログインしているユーザーが同じであれば上記を表示する %>
         <%= image_tag @plan.image.variant(resize: '500x500'),class: "image-plan-show" %>
      <div class="plan__body">

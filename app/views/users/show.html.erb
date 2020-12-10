@@ -1,7 +1,6 @@
 <div class="text-center">
   <h4 class="text-center mt-4 "><%= @user.nickname %>さんの投稿一覧</h4>
-
-<%= link_to '投稿画面へ', new_user_registration_path , class: "btn btn-primary" %>
+<%= link_to '記事一覧へ戻る', new_user_registration_path , class: "btn btn-primary" %>
   <div class="user-plan-contents">
   <% @user.plans.each do |plan| %>
     <%= image_tag plan.image, class: "show-plan-img" %>
