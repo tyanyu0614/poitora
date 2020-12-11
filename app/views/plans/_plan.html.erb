@@ -12,6 +12,7 @@
     <div id="like-btn-<%= plan.id %>">
         <tr id="plan_<%= plan.id %>">
         <%= render 'likes/like', plan: plan %>
+        <%# <%= render ‘relationships/follow_button’, user: @user %>
     </div>
 
       <%= plan.created_at.to_s(:datetime) %>

@@ -15,13 +15,15 @@
         <%= image_tag @plan.image.variant(resize: '500x500'),class: "image-plan-show" %>
      <div class="plan__body">
         <div class="plan__detail">
-          <%# <p class="title-show">TITLE</p> %>
           <%= @plan.title %>
           <p class="detail__content">
             <%= @plan.content %>
           </p>
           <p class="detail__cost">
             ¥<%= @plan.cost %>
+          </p>
+          <p class="detail__category">
+            ※<%= @plan.category.name %>
           </p>
         </div>
     </div>
@@ -48,8 +50,7 @@
       <% end %>
       </div>
     </div>
-    </div>
-        
+    </div> 
         </div>
       </div>
   </div>

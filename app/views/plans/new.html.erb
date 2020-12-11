@@ -1,18 +1,20 @@
   <div class="container">
     <h3 class="h3">新規投稿する</h3>
   <%= form_with(model: @plan, local: true) do |form| %>
-
   <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
   <%= render 'shared/error_messages', model: form.object %>
   <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-
 <div class="container mt-5">
   <div class="row">
     <div class="col-6 mx-auto">
+      <%= form.label :title, "タイトル" %><br />
       <%= form.text_field :title, placeholder: "旅行先",class: "form-control" %>
+      <%= form.label :content, "記事の内容" %><br />
       <%= form.text_area :content, placeholder: "旅行の内容や詳細を記入してください" ,class: "form-control"%>
+      <%= form.label :cost, "旅行費用" %><br />
       <%= form.text_area :cost, placeholder: "総費用" ,class: "form-control"%>
-       <%# <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      <%= form.label :category_id, "カテゴリー" %><br />
+       <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"form-control", id:"plan-category"})%>
   <div class="field">
     <%= form.label :image, "旅行の画像" %><br />
     <%= form.file_field :image %>
@@ -21,6 +23,5 @@
     </div>
    </div>
   </div>
-
   </div>
 <% end %>

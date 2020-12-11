@@ -311,6 +311,7 @@ form textarea {
 
 .user-plan-contents {
   margin-top: 30px;
+  
   /* border: 1px #999 solid; */
 }
 
@@ -340,3 +341,8 @@ form textarea {
   color: #e54747;
 }
 
+.content-box {
+  font-size: 18px;
+  margin: 20px 0px;
+  /* border: 1px #999 solid; */
+}

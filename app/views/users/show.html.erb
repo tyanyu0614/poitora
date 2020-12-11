@@ -1,13 +1,15 @@
 <div class="text-center">
   <h4 class="text-center mt-4 "><%= @user.nickname %>さんの投稿一覧</h4>
-<%= link_to '記事一覧へ戻る', new_user_registration_path , class: "btn btn-primary" %>
+<%= link_to '記事一覧へ戻る', new_user_registration_path , class: "plan__btn" %>
   <div class="user-plan-contents">
   <% @user.plans.each do |plan| %>
     <%= image_tag plan.image, class: "show-plan-img" %>
-    <div class= "">
-      <p><%= plan.title %></p>
-      <p><%= plan.cost %></p>
+    <div class= "content-box">
+    <table class="detail-table">
+      <p class="font-weight-bold"><%= plan.title %></p>
+      <p>¥<%= plan.cost %></p>
       <p><%= plan.content %></p>
+      </table>
       </div>
   <% end %>
   </div>
