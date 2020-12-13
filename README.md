@@ -33,7 +33,7 @@ Markdown: [TRAVEL SPACE](https://poitora.herokuapp.com/ "TRAVEL SPACE")
 ## バックエンド
 Ruby,Ruby on Rails
 
-##　フロントエンド
+## フロントエンド
 HTML,CSS,JavaScript,
 
 ## データベース
