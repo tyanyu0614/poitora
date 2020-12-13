@@ -7,8 +7,8 @@ TRAVEL　SPACE
 旅行計画やgotoトラベルキャンペーンの特典や割引の情報を効率的に調べることが実現したいと考え、
 ユーザー登録機能、記事詳細機能。コメント機能、記事投稿機能、検索機能、いいね機能などを実装しました。
 
-# DEMO画像
-https://gyazo.com/c833576ca4e52ce6588c8fcdd541b01f
+# DEMO動画
+「![Gif](https://raw.github.com/wiki/tyanyu0614/poitora/https://gyazo.com/c833576ca4e52ce6588c8fcdd541b01f.gif)」
 
 
 
