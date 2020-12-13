@@ -8,8 +8,8 @@ TRAVEL　SPACE
 ユーザー登録機能、記事詳細機能。コメント機能、記事投稿機能、検索機能、いいね機能などを実装しました。
 
 # DEMO動画
-「![demo](https://user-images.githubusercontent.com/73101963/102005378-ba30a300-3d5b-11eb-9166-e6f27f147d75.gif)
-」
+![demo](https://user-images.githubusercontent.com/73101963/102005378-ba30a300-3d5b-11eb-9166-e6f27f147d75.gif)
+
 
 
 
