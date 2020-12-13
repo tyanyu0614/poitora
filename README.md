@@ -5,12 +5,15 @@ TRAVEL　SPACE
 旅行が直近のもので、どういった予約サイトを利用したのか？割引クーポンを使用して旅行したのか？等の
 ノウハウに特化している情報共有できる媒体が少ないように感じたので、これから旅行を考えている方の、
 旅行計画やgotoトラベルキャンペーンの特典や割引の情報を効率的に調べることが実現したいと考え、
-記事投稿機能、検索機能、いいね機能などを実装しました。
+ユーザー登録機能、記事詳細機能。コメント機能、記事投稿機能、検索機能、いいね機能などを実装しました。
+
+# DEMO画像
+https://gyazo.com/c833576ca4e52ce6588c8fcdd541b01f
 
 
 
 # 本番環境
-Markdown: [TRAVEL SPACE](https://poitora.herokuapp.com/ "TRAVEL SPACE")
+[TRAVEL SPACE](https://poitora.herokuapp.com/ "TRAVEL SPACE")
 
 ログイン情報(テスト用)
 
@@ -26,15 +29,18 @@ Markdown: [TRAVEL SPACE](https://poitora.herokuapp.com/ "TRAVEL SPACE")
 
 
 # 工夫したポイント
+・投稿記事が新しいものが上に来るように設定し、投稿日時を記載したこと。
+・
 
 
 # 使用技術(開発環境)
+
 
 ## バックエンド
 Ruby,Ruby on Rails
 
 ## フロントエンド
-HTML,CSS,JavaScript,
+HTML,CSS,JavaScript
 
 ## データベース
 MySQL
@@ -55,10 +61,10 @@ RSpec
 VsCode
 
 # 課題や今後実装したい機能
-
+フォロー機能の追加、検索機能の強化(例:人気順で検索等)
+ユーザーが求めている有益な情報のなるように投稿時の入力項目の追加。
 
 # テーブル設計
-
 
 ## users テーブル
 
