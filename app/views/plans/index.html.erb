@@ -1,7 +1,7 @@
 <header>
 <div class="fixed-top">
       <nav class="navbar navbar-dark bg-dark">
-        <%= link_to root_path do %><span class="navbar-text-top">TRAVEL SPACE</span><%end%>
+        <%= link_to root_path do %><span class="navbar-text-top nounderline">TRAVEL SPACE</span><%end%>
       <ul class='lists-right list-unstyled'>      
         <% if user_signed_in? %>
         <li><%= link_to current_user.nickname, user_path(current_user), class: "maypage-rigth" %></li>
