@@ -1,4 +1,4 @@
-# アプリケーション名
+# アプリ名
 TRAVEL　SPACE
 
 # 概要
@@ -10,9 +10,12 @@ TRAVEL　SPACE
 
 
 # 本番環境
-heroku　https://poitora.herokuapp.com/
 Markdown: [TRAVEL SPACE](https://poitora.herokuapp.com/ "TRAVEL SPACE")
-※今後は、AWSにてデプロイ予定
+
+ログイン情報(テスト用)
+
+・Eメール: test@test3
+・パスワード: qqqqqq1
 
 
 # 制作背景(意図)
@@ -25,9 +28,31 @@ Markdown: [TRAVEL SPACE](https://poitora.herokuapp.com/ "TRAVEL SPACE")
 # 工夫したポイント
 
 
+# 使用技術(開発環境)
 
-#　使用技術(開発環境)
+## バックエンド
+Ruby,Ruby on Rails
 
+##　フロントエンド
+HTML,CSS,JavaScript,
+
+## データベース
+MySQL
+
+## インフラ
+
+## webサーバー(本番環境)
+
+## アプリケーションサーバー(本番環境)
+
+## ソース管理
+GitHub,GitHubDesktop
+
+## テスト
+RSpec
+
+## エディタ
+VsCode
 
 # 課題や今後実装したい機能
 
