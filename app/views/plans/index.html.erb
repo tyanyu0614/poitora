@@ -2,7 +2,7 @@
 <div class="fixed-top">
       <nav class="navbar navbar-dark bg-dark">
         <%= link_to root_path do %><span class="navbar-text-top">TRAVEL SPACE</span><%end%>
-      <ul class='lists-right '>      
+      <ul class='lists-right list-unstyled'>      
         <% if user_signed_in? %>
         <li><%= link_to current_user.nickname, user_path(current_user), class: "maypage-rigth" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-right" %></li>
