@@ -11,8 +11,6 @@ TRAVEL SPACE
 ![demo](https://user-images.githubusercontent.com/73101963/102005378-ba30a300-3d5b-11eb-9166-e6f27f147d75.gif)
 
 
-
-
 # 本番環境
 [TRAVEL SPACE](https://poitora.herokuapp.com/ "TRAVEL SPACE")
 
@@ -20,7 +18,6 @@ TRAVEL SPACE
 
 ・Eメール: test@test<br>
 ・パスワード: qqqqqq1
-
 
 # 制作背景(意図)
 今回作成させていただいたのは、これから旅行しようと考えている方が
@@ -32,7 +29,6 @@ TRAVEL SPACE
 # 工夫したポイント
 ・投稿記事が新しいものが上に来るように設定し、投稿日時を記載したこと。<br>
 ・AmazonS3を利用し画像が壊れないように設定。
-
 
 # 使用技術(開発環境)
 
@@ -46,10 +42,13 @@ HTML,CSS,JavaScript
 MySQL
 
 ## インフラ
+heroku
 
 ## webサーバー(本番環境)
+heroku
 
 ## アプリケーションサーバー(本番環境)
+heroku
 
 ## ソース管理
 GitHub,GitHubDesktop
