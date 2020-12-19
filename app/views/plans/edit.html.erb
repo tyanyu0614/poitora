@@ -8,9 +8,14 @@
       <%= render 'shared/error_messages', model: form.object %>
       <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
-      <%= form.text_field :title, placeholder: "タイトル" , class:"form-control" %>
-      <%= form.text_area :content, placeholder: "記事内容" , class:"form-control" %>
-      <%= form.text_area :cost, placeholder: "総費用" , class:"form-control" %>
+      <%= form.label :title, "タイトル" %><br />
+      <%= form.text_field :title, placeholder: "旅行先",class: "form-control" %>
+      <%= form.label :content, "記事の内容" %><br />
+      <%= form.text_area :content, placeholder: "旅行の内容や詳細を記入してください" ,class: "form-control"%>
+      <%= form.label :cost, "旅行費用" %><br />
+      <%= form.text_area :cost, placeholder: "総費用" ,class: "form-control"%>
+      <%= form.label :category_id, "カテゴリー" %><br />
+       <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"form-control", id:"plan-category"})%>
 
       <div class="field">
         <%= form.label :image, "旅行の画像" %><br />
