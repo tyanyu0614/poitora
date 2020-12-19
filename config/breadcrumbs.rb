@@ -8,11 +8,11 @@ crumb :plans do
 end
 
 crumb :plan_show do
-  link "旅行記事詳細", plan_path
+  link "旅行記事詳細", root_path
   parent :plans
 end
 
 crumb :user_show do
-  link "ユーザー詳細", user_path
+  link "ユーザー詳細", root_path
   parent :plans
 end
