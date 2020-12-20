@@ -15,7 +15,7 @@ class User < ApplicationRecord
 
   # いいね機能アソシエーション
   has_many :likes
-
+  
   with_options presence: true do
     validates :nickname
     validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]/ }
@@ -38,5 +38,13 @@ class User < ApplicationRecord
 
   def following?(other_user)
     followings.include?(other_user)
+  end
+
+  #かんたんログイン機能
+  def self.guest
+    find_or_create_by!(email: 'test@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+    end
   end
 end
