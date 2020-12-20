@@ -27,12 +27,12 @@
       <nav class="navbar navbar-dark bg-dark">
         <%= link_to root_path do %><span class="navbar-text-top text-white">TRAVEL SPACE</span><%end%>
       <ul class='lists-right list-unstyled'>
-      <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
+      <%# deviseを導入後、ログインの有無で表示が変わるように分岐%>
         <% if user_signed_in? %>
         <li><%= link_to current_user.nickname, user_path(current_user), class: "maypage-rigth" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-right" %></li>
         <%# <% else %>
-      <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
+      <%# deviseを導入後、ログインの有無で表示が変わるように分岐%>
         <%end%>
         </ul>
       </nav>
