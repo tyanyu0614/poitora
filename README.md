@@ -29,7 +29,6 @@ TRAVEL SPACE
 # 工夫したポイント
 ・投稿記事が新しいものが上に来るように設定し、投稿日時を記載したこと。<br>
 ・AmazonS3を利用し画像が壊れないように設定。
-・
 
 # 使用技術(開発環境)
 
@@ -89,7 +88,7 @@ VsCode
 
 | Column            | Type       | Options                       |
 | --------------    | ---------- | ----------------------------- |
-| text           | text       | null: false                   |  
+| text              | text       | null: false                   |  
 | user              | references | null: false,foreign_key: true |
 | plan              | references | null: false,foreign_key: true |
 
