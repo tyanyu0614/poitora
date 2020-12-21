@@ -112,6 +112,12 @@ h1 {
 
 .maypage-rigth{
   color:white;
+
+}
+
+.nav-lists{
+  /* display: flex;
+  justify-content: space-around; */
 }
 
 .logout-right {

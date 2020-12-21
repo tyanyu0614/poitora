@@ -24,9 +24,10 @@
 <body>
 <header>
     <div>
-      <nav class="navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-dark bg-dark ">
         <%= link_to root_path do %><span class="navbar-text-top text-white">TRAVEL SPACE</span><%end%>
-      <ul class='lists-right list-unstyled'>
+        
+      <ul class='nav-lists'>
       <%# deviseを導入後、ログインの有無で表示が変わるように分岐%>
         <% if user_signed_in? %>
         <li><%= link_to current_user.nickname, user_path(current_user), class: "maypage-rigth" %></li>
@@ -44,7 +45,7 @@
 </body>
   <footer class="footer">
     <div class="container">
-      <p class="text-muted">Travel Space footer content here.</p>
+      <p class="text-muted">2020 — Copyright - yuya horibata, 2020 All Rights Reserved.</p>
     </div>
   </footer>
 </html>
