@@ -12,7 +12,7 @@ TRAVEL SPACE
 
 
 # 本番環境
-[TRAVEL SPACE](https://poitora.herokuapp.com/ "TRAVEL SPACE")
+[TRAVEL SPACE](http://18.177.79.206/ "TRAVEL SPACE")
 
 ログイン情報(テスト用)
 
@@ -29,6 +29,7 @@ TRAVEL SPACE
 # 工夫したポイント
 ・投稿記事が新しいものが上に来るように設定し、投稿日時を記載したこと。<br>
 ・AmazonS3を利用し画像が壊れないように設定。
+・EC2を利用し、デプロイ
 
 # 使用技術(開発環境)
 
@@ -42,13 +43,13 @@ HTML,CSS,JavaScript
 MySQL
 
 ## インフラ
-heroku
+AWS(EC2),Capistrano
 
 ## webサーバー(本番環境)
-heroku
+nginx
 
 ## アプリケーションサーバー(本番環境)
-heroku
+unicorn
 
 ## ソース管理
 GitHub,GitHubDesktop
