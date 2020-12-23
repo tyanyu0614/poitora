@@ -1,3 +1,12 @@
 // Place all the styles related to the plans controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.plan-page-header {
+  height: 65vh;
+  background-image: url("pascal-brokmeier-Jjgci6LHWCw-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  opacity: 0.8;
+}
