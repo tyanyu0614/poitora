@@ -12,7 +12,7 @@
         <% end %>
         <%= link_to '記事一覧画面へ', new_user_registration_path , class: :plan__btn %>
       <%# プランの投稿者とログインしているユーザーが同じであれば上記を表示する %>
-        <%# <%= image_tag @plan.image.variant(resize: '500x500'),class: "image-plan-show" %>
+        <%= image_tag @plan.image.variant(resize: '500x500'),class: "image-plan-show" %>
      <div class="plan__body">
         <div class="plan__detail">
           <%= @plan.title %>
